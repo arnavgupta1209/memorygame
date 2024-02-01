@@ -34,6 +34,7 @@ export default function Pokecard({pokemon, setState, state}) {
                     for (let i=0; i<9; i++){
                         newstate.pokeclicked[i] = false;
                     }
+                    newstate.score = -1;
                 }
                 newstate.score += 1;
                 newstate.clickedpokemon = id;
