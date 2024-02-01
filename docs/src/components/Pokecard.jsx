@@ -27,6 +27,7 @@ export default function Pokecard({pokemon, setState, state}) {
                 console.log("here");
                 newstate.pokeclicked[id] = true;
                 if (newstate.score+1 > newstate.highscore){newstate.highscore = newstate.score+1}
+                if (newstate.score+1 == 9){newstate.highscore = 0; newstate.score = 0; alert("Max Score Reached!")}
                 newstate.score += 1;
                 newstate.clickedpokemon = id;
                 newstate.pokemon_list = shuffle(state.pokemon_list);
